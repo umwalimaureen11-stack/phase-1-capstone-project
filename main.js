@@ -50,4 +50,21 @@ function displayBooks(books, searchQuery = null) {
         </button>
       </div>
     `;
+       const btn = card.querySelector("button");
+    btn.addEventListener("click", () => {
+      const success = addToFavorites({ 
+        id: book.key, 
+        title: book.title, 
+        author: book.author_name?.[0] || "Unknown Author", 
+        cover: book.cover_i 
+      });
+      
+      if (success) {
+        btn.textContent = "✓ In Favorites";
+        btn.className = "w-full bg-gray-400 text-white py-2 rounded transition";
+      }
+    });
     
+    bookGrid.appendChild(card);
+  });
+}
