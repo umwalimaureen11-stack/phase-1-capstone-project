@@ -9,3 +9,8 @@ export function addToFavorites(book) {
   saveFavorites(favorites);
   return true;
 }
+export function removeFromFavorites(bookId) {
+  let favorites = getFavorites();
+  favorites = favorites.filter(book => book.id !== bookId);
+  saveFavorites(favorites);
+}
