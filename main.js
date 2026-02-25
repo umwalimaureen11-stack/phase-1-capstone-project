@@ -85,4 +85,4 @@ searchInput.addEventListener("keypress", (e) => {
 });
 
 showLoading();
-fetchBooks("popular").then(books => displayBooks(books));
+fetchBooks("popular").then(books => displayBooks(books)); 
