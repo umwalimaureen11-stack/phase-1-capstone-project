@@ -14,3 +14,7 @@ export function removeFromFavorites(bookId) {
   favorites = favorites.filter(book => book.id !== bookId);
   saveFavorites(favorites);
 }
+export function isFavorite(bookId) {
+  const favorites = getFavorites();
+  return favorites.some(book => book.id === bookId);
+}
