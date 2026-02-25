@@ -68,3 +68,21 @@ function displayBooks(books, searchQuery = null) {
     bookGrid.appendChild(card);
   });
 }
+
+
+async function handleSearch() {
+  const query = searchInput.value.trim();
+  if (!query) return;
+  
+  showLoading();
+  const books = await fetchBooks(query);
+  displayBooks(books, query);
+}
+
+searchBtn.addEventListener("click", handleSearch);
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") handleSearch();
+});
+
+showLoading();
+fetchBooks("popular").then(books => displayBooks(books));
