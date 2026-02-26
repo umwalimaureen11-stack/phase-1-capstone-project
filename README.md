@@ -23,16 +23,6 @@ A beautiful web application to discover, search, and save your favorite books. B
    Simply open `index.html` in your web browser:
 
 
-phase1-capston/
-├── index.html          # Main page with search and book grid
-├── favorites.html      # Favorites page
-├── about.html          # About page
-├── main.js             # Main page logic
-├── fetch.js            # Open Library API integration
-├── favorites.js        # Favorites management
-├── storage.js          # LocalStorage handling
-├── favoritespage.js    # Favorites page logic
-└── README.md           # This file
 
 
  How It Works
